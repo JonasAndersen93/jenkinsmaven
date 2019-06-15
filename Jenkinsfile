@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Clone repo and clean'){
             steps{
+                sh 'rm -rf  jenkinsmaven'
                 sh 'git clone https://github.com/JonasAndersen93/jenkinsmaven.git'
                 sh 'mvn clean -f jenkinsmaven'
 
